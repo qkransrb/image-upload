@@ -30,7 +30,7 @@ const UploadForm = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/upload",
+        "http://localhost:5000/images",
         formData,
         {
           headers: {
@@ -59,6 +59,7 @@ const UploadForm = () => {
       setPercent(0);
       setFile(undefined);
       setImgSrc(undefined);
+      setFilename("이미지 파일을 업로드 해주세요.");
       throw error;
     }
   };
